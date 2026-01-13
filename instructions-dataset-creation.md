@@ -12,13 +12,14 @@ This is an instruction on how we modify the [LIMIT benchmark](https://github.com
 
 
 
-## LIMIT-H
+## LIMIT-H <a name="limit-h"></a>
 1. start with `nq-dev.json` and `raw.tsv` (see [Formatting LIMIT](##formatting_limit) in the working directory
 2. create hard documents with `python add_hard_documents.py` (make sure that paths match your local file structure)
 3. run `python remove_newlines.py` to clean the output
-4. append hard documents to original documents by running `cat raw.tsv raw-hard.tsv > raw.tsv` 
+4. append hard documents to original documents by running `cat raw.tsv raw-hard.tsv > raw-both.tsv`
 5. run `python check_hard_documents.py` (make sure that paths match your local file structure)
 
 
-## LIMIT-HS
-1. 
+## LIMIT-HS <a name="limit-hs"></a>
+1. start with `nq-dev.json` and `raw-checked.tsv` (see [LIMIT-HS](##limit-h) in the working directory
+2. run `duplicate_hard_docs.py` - the result is that all negatives are duplicated in the document file (input: `raw-checked.tsv`, output: `raw-hs.tsv`)
