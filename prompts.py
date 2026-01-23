@@ -51,3 +51,31 @@ Input (Sentence; Array): (Peter walks his Dog., [Bridge, Science Fiction, Iron])
 Correct Output: Peter walks his Dog over a Bridge made of Iron, crossing over to the other side, where someone reads Science Fiction out aloud. 
 
 Input (Sentence; Array): '''
+
+
+pseudo_query_prompt = f"""
+Create a diverse set of questions starting with "Who likes " based on a given text, separate the questions with [SEP]: 
+
+Example:
+Example Input: Olinda Posso likes to imagine herself as the master architect of a surreal utopia, where Bagels levitate above Hot Chocolate rivers, Pumpkin Seeds are used as currency among The Industrial Revolution-era robots.
+Correct Output: Who likes to imagine herself as the master architect of a surreal utopia? [SEP] Who likes to imagine Bagels levitating above Hot Chocolate rivers? [SEP] Who likes a surreal utopia where Pumpkin Seeds are used as currency among robots?
+
+Input: """
+
+pseudo_query_prompt_owns = f"""
+Create a diverse set of questions starting with "Who owns " based on a given text, separate the questions with [SEP]: 
+
+Example:
+Example Input: Olinda Posso owns a mysterious archive where Bagels orbit as celestial bodies, Hot Chocolate flows like rivers, Pumpkin Seeds are ancient artifacts and Eggplants are mysterious plants used in secret rituals.
+Correct Output: Who owns a mysterious archive? [SEP] Who owns a mysterious archive where Bagels orbit as celestial bodies? [SEP] Who owns the place where Hot Chocolate flows like rivers? 
+
+Input: """
+
+pseudo_query_prompt_touches = f"""
+Create a diverse set of questions starting with "Who touches " based on a given text, separate the questions with [SEP]: 
+
+Example:
+Example Input: Olinda Posso touches a mysterious box in which Bagels orbit as celestial bodies, Hot Chocolate flows like rivers, Pumpkin Seeds are ancient artifacts and Eggplants are mysterious plants used in secret rituals.
+Correct Output: Who touches a mysterious box? [SEP] Who touches a mysterious box in which Bagels orbit as celestial bodies? [SEP] Who touches the item in which Hot Chocolate flows like rivers? 
+
+Input: """
