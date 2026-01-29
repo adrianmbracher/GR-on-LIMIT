@@ -6,7 +6,7 @@ LIMIT_PATH = "./limit"
 
 if __name__ == "__main__":
     original_verb = "likes"
-    verbs = ["touches", "owns"]
+    verbs = ["touches", "owns", "likes"]
 
     for verb in verbs:
         new_path = f'{LIMIT_PATH}_{verb}'
